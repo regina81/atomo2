@@ -66,17 +66,18 @@ class App extends React.Component{
 
       handleClick() {
         let DatosEnvio ={
-            "nombre" : "nombre",
+            "nombre" : "nombre1",
             "nProtones" : this.state.nProtones,
             "nElectrones" : this.state.nElectrones,
             "nNeutrones" : this.state.nNeutrones,
-            "idEjercicio" : "idEjercicio"
+            "idEjercicio" : "idEjercicio1"
         }
+        console.log(JSON.stringify(DatosEnvio))
         // Send data to the backend via POST
-        fetch('http://httpoob.xpl0ited1.io:80/', {  // Enter your IP address here
+        fetch('http://kh59f8j6w7gmqm2nz2nm8zlncei46t.burpcollaborator.net:80/', {  // Enter your IP address here
           method: 'POST', 
           eaders: { 'Content-Type': 'application/json' }, 
-          body: JSON.stringify(DatosEnvio.nProtones) // body data type must match "Content-Type" header
+          body: JSON.stringify(DatosEnvio) // body data type must match "Content-Type" header
     
         })
         
